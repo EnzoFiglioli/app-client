@@ -1,0 +1,75 @@
+.main {
+  background: url("../public/ENVIOMINIMO_BTOP_DESK_ENAMORADOS.jpg") no-repeat
+    center center;
+  background-size: cover;
+  min-height: 100dvh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+  animation: changeBackground 15s infinite alternate;
+}
+
+@media (max-width: 768px) {
+  .main {
+    background-position: 70% top;
+  }
+}
+
+@keyframes changeBackground {
+  0% {
+    background-image: url("../public/GENERICO_BCATEGORY_DESK.jpg");
+  }
+  50% {
+    background-image: url("../public/ENVIOMINIMO_BTOP_DESK_ENAMORADOS.jpg");
+  }
+  100% {
+    background-image: url("../public/desk_hero_perfumaria_01.jpg");
+  }
+}
+
+/* Overlay para legibilidad */
+.main::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.212);
+}
+
+.main * {
+  position: relative;
+  z-index: 1;
+}
+
+h1 {
+  color: #ffffff;
+  text-align: center;
+  font-family: "Sigmar", cursive;
+  font-size: 3rem;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+  margin-bottom: 10px;
+}
+
+.main p {
+  color: #eaeaea;
+  font-size: 1.2rem;
+  max-width: 600px;
+  text-align: center;
+}
+section {
+  background: #ffffff;
+  padding: 40px 30px;
+  border-radius: 12px;
+  max-width: 900px;
+  margin: 60px auto;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.cardContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}

@@ -1,0 +1,56 @@
+.header {
+  position: fixed;
+
+  top: 0;
+  height: 70px;
+  width: calc(100% - 80px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 40px;
+  z-index: 100;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* HOME */
+.transparent {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+/* OTRAS RUTAS */
+.solid {
+  background-color: #ffffff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+/* Links */
+.nav__links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.nav__links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+/* En home los links claros */
+.transparent .nav__links a,
+.transparent .logo {
+  color: #ffffff;
+}
+
+/* En otras páginas */
+.solid .nav__links a,
+.solid .logo {
+  color: #111;
+}
