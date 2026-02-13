@@ -1,13 +1,12 @@
 export default function SignIn() {
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    const formData = new FormData(e.target);
-    const email = formData.get("email");
-    const password = formData.get("password");
+    const formData = new FormData(e.currentTarget);
+    const email = formData.get("email") as string;
+    const password = formData.get("password") as string;
 
     console.log({ email, password });
-    // acá luego conectás tu auth (API, Firebase, etc.)
   };
 
   return (
@@ -45,7 +44,7 @@ export default function SignIn() {
   );
 }
 
-const styles = {
+const styles: Record<string, React.CSSProperties> = {
   container: {
     marginTop: "120px",
     display: "flex",
