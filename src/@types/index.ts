@@ -30,5 +30,3 @@ export interface ProductCart extends BaseProduct {
   category: string;
   picture: Picture
 };
-
-export type CreateProduct = BaseProduct
